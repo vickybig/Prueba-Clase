@@ -1,0 +1,39 @@
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contacto - Dulce Sabor</title>
+</head>
+<body>
+   <h1>Contacto</h1>
+   <form action="#" method="POST">
+      <!-- Nombre -->
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <!-- Tipo de pastel -->
+      <label for="tipo">Tipo de Pastel:</label>
+      <select id="tipo" name="tipo" required>
+         <option value="chocolate">Chocolate</option>
+         <option value="fresa">Fresa</option>
+         <option value="vainilla">Vainilla</option>
+      </select><br><br>
+
+      <!-- Comentarios -->
+      <label for="comentarios">Comentarios:</label>
+      <textarea id="comentarios" name="comentarios" rows="4" cols="50" required></textarea><br><br>
+
+      <!-- Aceptación de términos -->
+      <label>
+         <input type="checkbox" name="terminos" required> Acepto los términos y condiciones
+      </label><br><br>
+
+      <!-- Botón de envío -->
+      <button type="submit">Enviar</button>
+   </form>
+</body>
+</html>
