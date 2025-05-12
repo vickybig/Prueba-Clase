@@ -1,20 +1,143 @@
 /* estilos.css - Estilos base para Dulce Sabor */
 
-body {
-    background-color: #fff8f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #4b2e2e;
+
+*{
+    margin: 200;
+    padding: 20;
+    box-sizing: border-box;
 }
 
-.container {
-    width: 900px;
-    margin: 0 auto;
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(243, 223, 226);
+    color: black;
 }
 
-header, footer {
+
+header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #efd1c2;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* 👈 separación entre enlaces */
+    padding: 10px;
+}
+nav a {
+    color: rgb(231, 178, 144);
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #7d644e;
+}
+
+
+
+footer{
     background-color: #f4d3c2;
-    padding: 1em;
-    margin-bottom: 1em;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
 }
+ 
+ h2, h3 {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+ }
+ 
+ ul {
+    list-style-type: none;
+    padding-left: 0;
+ }
+ 
+ ul li {
+    padding: 10px 0;
+ }
+ 
+ strong {
+    color: #e74c3c;
+ }
+
+ /* Aseguramos que la sección de los pasteles tenga un diseño de flexbox */
+.pastel {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se acomoden en múltiples líneas si no caben */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 20px; /* Espacio entre las imágenes */
+    padding: 20px;
+ }
+ 
+ /* Estilizamos los divs individuales de cada pastel */
+ .pastel > .pastel {
+    text-align: center; /* Centra el texto (nombre y precio) */
+    width: 250px; /* Establece un tamaño fijo para las tarjetas de los pasteles */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para cada pastel */
+    padding: 15px;
+    background-color: #fff; /* Fondo blanco */
+    transition: transform 0.3s ease-in-out; /* Efecto al pasar el ratón */
+ }
+ 
+ /* Efecto de hover para las tarjetas */
+ .pastel > .pastel:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
+ }
+ 
+ /* Hacemos que las imágenes se ajusten bien dentro de su contenedor */
+ .pastel > .pastel img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    object-fit: cover; /* Asegura que la imagen se recorte bien sin deformarse */
+ }
+ 
+ /* Alinea el título y el precio debajo de la imagen */
+ .pastel > .pastel h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 10px;
+ }
+ 
+ .pastel > .pastel p {
+    font-size: 1rem;
+    color: #e74c3c;
+    margin-top: 5px;
+ }
+ 
+
+ section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ h2, h3 {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+ }
+ 
+ ul {
+    list-style-type: none;
+    padding-left: 0;
+ }
+ 
+ ul li {
+    padding: 10px 0;
+ }
+ 
+ strong {
+    color: #e74c3c;
+ }
+ 
+
+ 

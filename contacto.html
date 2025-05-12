@@ -1,39 +1,72 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Contacto - Dulce Sabor</title>
+  <meta charset="UTF-8" />
+  <title>Contacto | Dulce Sabor</title>
+  <link rel="stylesheet" href="css/estilos.css" />
 </head>
 <body>
-   <h1>Contacto</h1>
-   <form action="#" method="POST">
-      <!-- Nombre -->
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required><br><br>
+  <div class="container">
+    <header>
+      <h1>¿QUE OPINAS?</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
 
-      <!-- Email -->
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required><br><br>
+    <main>
+        <section>
+          <h2>Contáctanos</h2>
+          <form id="form-contacto">
+            <label for="nombre">Nombre:</label><br />
+            <input type="text" id="nombre" name="nombre" required /><br /><br />
+          
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required /><br /><br />
+          
+            <label for="tipo">Tipo de pastel:</label><br />
+            <select id="tipo" name="tipo">
+              <option value="chocolate">Pastelitos</option>
+              <option value="zanahoria y nueces">Pastel de frutas</option>
+              <option value="frutos del bosque">Pasteles gourmets</option>
+              <option value="cheesecake">Pastel de fresa</option>
+              <option value="cheesecake">Trozos tradicionales</option>
+              <option value="cheesecake">Especialidad de casa</option>
+            </select><br /><br />
+          
+            <label for="comentarios">Comentario:</label><br />
+            <textarea id="comentarios" name="comentarios" rows="4" cols="40"></textarea><br /><br />
+          
+            <label>
+              <input type="checkbox" name="terminos" required />
+              Acepto los términos y condiciones
+            </label><br /><br />
+          
+            <button type="submit">Enviar</button>
+          </form>
+          
+          <p id="mensaje-confirmacion" style="color: rgb(234, 74, 210); font-weight: bold; display: none; margin-top: 20px;"></p>
+          
+        </section>
+      </main>   
 
-      <!-- Tipo de pastel -->
-      <label for="tipo">Tipo de Pastel:</label>
-      <select id="tipo" name="tipo" required>
-         <option value="chocolate">Chocolate</option>
-         <option value="fresa">Fresa</option>
-         <option value="vainilla">Vainilla</option>
-      </select><br><br>
+    <footer>
+      <p>Visítanos y endulza tu día 🍰 © 2025 Dulce Sabor</p>
+    </footer>
+  </div>
 
-      <!-- Comentarios -->
-      <label for="comentarios">Comentarios:</label>
-      <textarea id="comentarios" name="comentarios" rows="4" cols="50" required></textarea><br><br>
-
-      <!-- Aceptación de términos -->
-      <label>
-         <input type="checkbox" name="terminos" required> Acepto los términos y condiciones
-      </label><br><br>
-
-      <!-- Botón de envío -->
-      <button type="submit">Enviar</button>
-   </form>
+  <script>
+    const form = document.getElementById('form-contacto');
+    const mensaje = document.getElementById('mensaje-confirmacion');
+  
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Evita que la página se recargue
+      mensaje.textContent = "¡Sera un gusto atenderte!";
+      mensaje.style.display = 'block';
+      form.reset(); // Limpia el formulario
+    });
+  </script>
 </body>
 </html>
